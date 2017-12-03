@@ -1,11 +1,15 @@
 body { /*Da el color de fondo al body*/
   background: #6FA2FF;
+  margin: 0;
+  padding: 0;
 }
 .board { /*Da estilo al bloque azul de la izquierda*/
   background-color: #9FB7FF;
   width: 120px;
   border-radius: 5px;
   height: 40px;
+  display: inline-block;
+  margin: 15px 15px;
 }
 
 .board > p {/*Da estilo al texto tableros*/
@@ -16,11 +20,12 @@ body { /*Da el color de fondo al body*/
 
 .board > img {/*Da estilo al icono al lado del texto tableros*/
   height: 20px;
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 nav { /*Da el color de fondo a la primera seccion*/
   background: #026aa7;
+  outline: 5px solid black;
 }
 
 .iconos-fondo > img {/*Da el tamaño a los iconos de la derecha*/
@@ -28,7 +33,7 @@ nav { /*Da el color de fondo a la primera seccion*/
 }
 
 .logo-trello > img {/*Da el tamaño añ logo de trello*/
-  height: 20px;
+  height: 35px;
 }
 
 .iconos-fondo {/*Da estilo a los divs que sirven como fondo a los iconos de la derecha*/
@@ -39,15 +44,34 @@ nav { /*Da el color de fondo a la primera seccion*/
   display: inline-block;
 }
 
-.circle {/*Da estilo al article que genera el circulo de la derecha*/
+.circle {/*Da estilo al div que genera el circulo de la derecha*/
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: #9FB7FF;
   color: white;
   font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  padding-top: 0;
 }
 
-.iconos {
-  float: right;
+.iconos { /*Da estilo a ala section que contiene los iconos de la derecha*/
+  width: 180px;
+  outline: 5px solid black;
+  display: inline-block;
+  margin-left: 400px;
+}
+
+.input { /*Da estilo a la section que contiene el input*/
+outline: 5px solid black;
+width: 250px;
+display: inline-block;
+margin-left:
+}
+
+.logo-trello { /*Da estilo a la section que contiene el logo de trello*/
+  width: 150px;
+  display: inline-block;
+  margin: 15px 0px 0px 200px;
 }
