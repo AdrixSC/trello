@@ -1,0 +1,53 @@
+body { /*Da el color de fondo al body*/
+  background: #6FA2FF;
+}
+.board { /*Da estilo al bloque azul de la izquierda*/
+  background-color: #9FB7FF;
+  width: 120px;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.board > p {/*Da estilo al texto tableros*/
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+}
+
+.board > img {/*Da estilo al icono al lado del texto tableros*/
+  height: 20px;
+  margin-left: 15px;
+}
+
+nav { /*Da el color de fondo a la primera seccion*/
+  background: #026aa7;
+}
+
+.iconos-fondo > img {/*Da el tamaño a los iconos de la derecha*/
+  height: 20px
+}
+
+.logo-trello > img {/*Da el tamaño añ logo de trello*/
+  height: 20px;
+}
+
+.iconos-fondo {/*Da estilo a los divs que sirven como fondo a los iconos de la derecha*/
+  background-color: #9FB7FF;
+  width: 35px;
+  border-radius: 5px;
+  height: 40px;
+  display: inline-block;
+}
+
+.circle {/*Da estilo al article que genera el circulo de la derecha*/
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #9FB7FF;
+  color: white;
+  font-weight: bold;
+}
+
+.iconos {
+  float: right;
+}
