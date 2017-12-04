@@ -3,8 +3,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-<title>trello</title>
-<path fill="#FCFCFC" d="M29,0H3C1.35,0,0,1.35,0,3v26c0,1.65,1.35,3,3,3h26c1.65,0,3-1.35,3-3V3C32,1.35,30.65,0,29,0z M14,24
-	c0,1.1-0.9,2-2,2H8c-1.1,0-2-0.9-2-2V8c0-1.1,0.9-2,2-2h4c1.1,0,2,0.9,2,2V24z M26,18c0,1.1-0.9,2-2,2h-4c-1.1,0-2-0.9-2-2V8
-	c0-1.1,0.9-2,2-2h4c1.1,0,2,0.9,2,2V18z"/>
+<title>star-empty</title>
+<path fill="#FCFCFC" d="M32,12.408l-11.057-1.607L16,0.783l-4.944,10.018L0,12.408l8,7.798L6.111,31.217L16,26.018l9.889,5.199
+	L24,20.206L32,12.408z M16,23.547l-6.983,3.671l1.334-7.776l-5.65-5.506l7.808-1.134l3.492-7.075l3.492,7.075l7.807,1.134
+	l-5.649,5.506l1.334,7.776L16,23.547L16,23.547z"/>
 </svg>
