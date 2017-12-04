@@ -1,0 +1,19 @@
+#submit-button {
+    display: block;
+}
+
+article {
+    float: left;
+}
+
+article>label {
+    display: block;
+}
+
+#textarea {
+    float: left;
+}
+
+#tasks {
+    float: left;
+}

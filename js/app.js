@@ -12,36 +12,42 @@ var remove = function() {
 var taskAdd = function(event) {
     event.preventDefault(); //para prevenir eventos inesperados de la funcion
 
-//creamos elementos basados en la estructura del html
+    //creamos elementos basados en la estructura del html
     var task = document.getElementById('text');
     var article = document.createElement('article');
     var label = document.createElement('label');
-    var input = document.createElement('input');
-    var button = document.createElement('button');
+    var a = document.createElement('a')
+    var contentA = document.createTextNode('Agregar una tarjeta')
+
+    //var input = document.createElement('input');
+    //var button = document.createElement('button');
 
     var id = 'check' + account;
 
-//agregamos atributos a los elementos de article
-    input.type = 'checkbox'; // esta forma es igual a hacer lo sig: checkbox.setAttribute ("type","checkbox")
-    input.addEventListener('click', throughTask);//funcion declarada más abajo...
-    input.id = id;
+    //agregamos atributos a los elementos de article
+    /*input.type = 'checkbox'; // esta forma es igual a hacer lo sig: checkbox.setAttribute ("type","checkbox")
+    input.addEventListener('click', throughTask); //funcion declarada más abajo...
+    input.id = id;*/
 
     label.setAttribute('for', id);
     label.textContent = task.value;
 
-    button.type = 'button';
+    /*button.type = 'button';
     button.innerText = 'x';
-    button.addEventListener('click', remove);
+    button.addEventListener('click', remove);*/
 
     //agregamos atributos al padre que es el article
-    article.appendChild(input);
+    //article.appendChild(input);
     article.appendChild(label);
-    article.appendChild(button);
-
+    article.appendChild(a);
+    a.appendChild(contentA);
+    //article.appendChild(button);
     container.appendChild(article);
     account++;
 
-    task.value = " ";//esto sirve para limpiar o borrar el contenido que el usuario agregó
+    task.value = " "; //esto sirve para limpiar o borrar el contenido que el usuario agregó
+
+
 };
 
 //declarando funcion para hacer el check list de las tareas que el usuario ha realizado ya
