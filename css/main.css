@@ -10,22 +10,27 @@ nav { /*Da el color de fondo a la primera seccion*/
   /*outline: 5px solid black;*/
 }
 
-#centrar {
-  margin: 10px 0px;
-}
 
-#search {
+#search { /*Da estilo al icono de search*/
   height: 20px;
   margin: 10px 0px 0px 40px;
 }
 
+#margin { /*ajusta el texto Tableros de la izquierda*/
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
 .board { /*Da estilo al bloque azul de la izquierda*/
+  vertical-align: middle;
   background-color: #9FB7FF;
   width: 120px;
   border-radius: 5px;
   height: 35px;
   display: inline-block;
-  margin: 15px 15px;
+  margin: -10px 15px 10px 15px;
 }
 
 .board > p {/*Da estilo al texto tableros*/
@@ -39,6 +44,7 @@ nav { /*Da el color de fondo a la primera seccion*/
 .board > img {/*Da estilo al icono al lado del texto tableros*/
   height: 20px;
   margin: 7px 7px;
+  vertical-align: middle;
 }
 
 .iconos-fondo > img {/*Da el tamaño a los iconos de la derecha*/
@@ -67,6 +73,7 @@ nav { /*Da el color de fondo a la primera seccion*/
   font-weight: bold;
   display: inline-block;
   text-align: center;
+  margin-top: -10px;
 }
 
 .iconos { /*Da estilo a ala section que contiene los iconos de la derecha*/
@@ -77,7 +84,6 @@ nav { /*Da el color de fondo a la primera seccion*/
 }
 
 .input { /*Da estilo a la section que contiene el input*/
-/*outline: 5px solid black;*/
 background: #9FB7FF;
 width: 250px;
 display: inline-block;
@@ -87,6 +93,7 @@ height: 35px;
 
 .input > input { /*Da estilo al input*/
   background: #9FB7FF;
+  border: none;
 /*  outline-style: none;*/
 
 }
@@ -103,21 +110,22 @@ height: 35px;
   font-weight: bold;
 }
 
-.section-two {
+.section-two { /* Baja los elementos de la section-two*/
 padding-top: 15px;
 }
 
 .section-two > .section-three { /*posiciona los elementos de section-three*/
-  float: right;
-  /*outline: 5px solid black;*/
-  margin: -45px 10px 0px 0px;
+  display: inline-block;
+  width: 160px;
+  height: 40px;
+  margin-left: 750px;
 }
 
 .ajuste { /*Ajusta la posicion de los iconos y textos de section-two*/
   margin: 0px 15px 0px 15px;
 }
 
-.ajuste-dos {
+.ajuste-dos { /*ajusta la estrella y el portafolio*/
   height: 19px;
   margin: 0px 15px 0px 15px;
 }
@@ -126,6 +134,11 @@ padding-top: 15px;
 /*  outline: 5px solid black;*/
   font-size: 20px;
 }
+
+.out { /*Ajusta el texto de Mostrar menú*/
+  margin-top: 5px;
+}
+
 
 #submit-button {
     display: block;
@@ -150,6 +163,7 @@ article>button {
 #tasks {
     float: left;
 }
+<<<<<<< HEAD
 
 .enebled-list {
   display: block;
@@ -171,3 +185,5 @@ article>button {
 .font {
   font-family: 'Roboto', sans-serif;
 }
+=======
+>>>>>>> 16a03590a52bb91763b13f43651e1e4d68fd49ae
