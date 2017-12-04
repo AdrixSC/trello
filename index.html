@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
     <title>Trello</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 </head>
 
 <body>
@@ -47,6 +48,10 @@
         <!--cambiar nombre-->
     </header>
     <form>
+      <div id= "list" class= "font">
+        <span id= "addList">Añadir una lista</span>
+        <!--<input class= "list-name" type="text" placeholder="Añadir una lista">-->
+      </div>
 
         <!--esta es la area en donde el usuario interactua agregando texto-->
         <section id="tasks">
@@ -61,7 +66,7 @@
         <div id="textarea">
             <!--este es el formulario-->
             <textarea id="text" placeholder="Añadir Lista"></textarea>
-            <!--este es el boton-->
+            <!--este es el boton que guarda la lista-->
             <input id="submit-button" type="submit" value="Guardar">
         </div>
     </form>
