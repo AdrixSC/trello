@@ -10,28 +10,11 @@ var remove = function() {
 
 //declarando variable para agregar tarjeta en la lista que el usuario ha creado
 //revisar con el squad y jedi
-var link = function(event) {
+var linkAremi = function(event) {
     event.preventDefault();
     console.log('haciendo click');
 
-};
-
-//declarando funcion para mostrar o no el textarea
-var article = document.getElementByTagName ("article");
-
-function showForm() {
-  var addList = document.getElementById('article');
-  if (addList.classList.contains("disable-list")){
-    menu.classList.remove("disable-list");
-    menu.classList.add("enabled-list");
-  }
-  else {
-    menu.classList.remove("enabled-menu");
-    menu.classList.add("disable-menu");
-  }
 }
-
-boton.addEventListener("click", showMenu);
 
 //declarando variable para agregar el evento, que agregará la tarea que el usuario ingresará
 var taskAdd = function(event) {
@@ -47,7 +30,7 @@ var taskAdd = function(event) {
     //var input = document.createElement('input');
     var button = document.createElement('button');
 
-    //var id = 'check' + account;
+    var id = 'check' + account;
 
     //agregamos atributos a los elementos de article
     /*input.type = 'checkbox'; // esta forma es igual a hacer lo sig: checkbox.setAttribute ("type","checkbox")
@@ -92,11 +75,3 @@ var throughTask = function() {
 };
 
 submitButton.addEventListener('click', taskAdd);
-
-var onOffBtn = function () {
-  if (text.length == 0) {
-  submitButton.disabled = true;
-  }
-}
-
-submitButton.addEventListener('click', onOffBtn);
