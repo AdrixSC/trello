@@ -10,6 +10,10 @@ article>label {
     display: block;
 }
 
+article>button {
+    border: 0;
+}
+
 #textarea {
     float: left;
 }

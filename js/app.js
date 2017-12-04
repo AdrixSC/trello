@@ -8,6 +8,14 @@ var remove = function() {
     //this.parentElement.remove();
 }
 
+//declarando variable para agregar tarjeta en la lista que el usuario ha creado
+//revisar con el squad y jedi
+var linkAremi = function(event) {
+    event.preventDefault();
+    console.log('haciendo click');
+
+}
+
 //declarando variable para agregar el evento, que agregará la tarea que el usuario ingresará
 var taskAdd = function(event) {
     event.preventDefault(); //para prevenir eventos inesperados de la funcion
@@ -20,7 +28,7 @@ var taskAdd = function(event) {
     var contentA = document.createTextNode('Agregar una tarjeta')
 
     //var input = document.createElement('input');
-    //var button = document.createElement('button');
+    var button = document.createElement('button');
 
     var id = 'check' + account;
 
@@ -35,13 +43,16 @@ var taskAdd = function(event) {
     /*button.type = 'button';
     button.innerText = 'x';
     button.addEventListener('click', remove);*/
+    var addCard = button;
+    addCard.innerText = 'Agregar una tarjeta';
+    addCard.addEventListener('click', linkAremi);
 
     //agregamos atributos al padre que es el article
     //article.appendChild(input);
     article.appendChild(label);
     article.appendChild(a);
-    a.appendChild(contentA);
-    //article.appendChild(button);
+    //a.appendChild(contentA);
+    article.appendChild(button);
     container.appendChild(article);
     account++;
 
