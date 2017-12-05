@@ -1,5 +1,10 @@
 var account = 0;
+
 var seccionArticle = document.getElementById('tasks');
+
+var position;
+var container = document.getElementById('tasks');
+
 var submitButton = document.getElementById('submit-button');
 var textArea = document.getElementById('textarea');
 var remove = function() {
@@ -8,6 +13,7 @@ var remove = function() {
     //this.parentElement.remove();
 }
 
+
 var buttonOff = function(){
   var campoTexto = textArea.value.length;
   if(campoTexto === 0){
@@ -15,6 +21,50 @@ var buttonOff = function(){
   }else{
     submitButton.disabled = false;
   }
+
+//declarando variable para agregar tarjeta en la lista que el usuario ha creado
+var link = function(event) {
+    var elId = this.id;
+    position = elId;
+    console.log('el id ', elId)
+
+    event.preventDefault();
+    console.log('haciendo click');
+    var createTextArea = document.createElement('textarea');
+    createTextArea.id = 'txaAdd' + elId;
+    var butonNewTask = document.createElement('button');
+    butonNewTask.innerText = 'Agregar tarea';
+    butonNewTask.id = 'btnAdd' + elId;
+    butonNewTask.addEventListener('click', addCard);
+
+    document.getElementsByTagName('article')[elId].appendChild(createTextArea)
+    document.getElementsByTagName('article')[elId].appendChild(butonNewTask)
+
+
+}
+var addCard = function(event) {
+    var elId = this.id;
+    console.log('elId ', elId)
+    console.log('position ', position)
+    console.log('aaaa ', 'article' + position)
+
+    event.preventDefault();
+    // console.log('haciendo click');
+    var addTask = document.createElement('div');
+    // addTask.id = 'lista'+ elId;
+
+    var newTask = document.getElementById('txaAdd' + position);
+    // console.log('ntval ', elId, newTask.value)
+
+    addTask.textContent = newTask.value;
+    document.getElementsByTagName('article')[position].appendChild(addTask)
+
+    txaAdd0.value = "";
+
+
+
+
+
 }
 
 //declarando variable para agregar el evento, que agregará la tarea que el usuario ingresará
@@ -24,6 +74,7 @@ var taskAdd = function(event) {
     //creamos elementos basados en la estructura del html
     var task = document.getElementById('text');
     var article = document.createElement('article');
+    article.id = 'article' + account;
     var label = document.createElement('label');
     var a = document.createElement('a')
     var contentA = document.createTextNode('Agregar una tarjeta')
@@ -40,6 +91,7 @@ var taskAdd = function(event) {
     button.innerText = 'x';
     button.addEventListener('click', remove);*/
     var addCard = button;
+    addCard.id = account;
     addCard.innerText = 'Agregar una tarjeta';
     addCard.addEventListener('click', link);
 
@@ -53,8 +105,21 @@ var taskAdd = function(event) {
     account++;
 
 
+
     task.value = ""; //esto sirve para limpiar o borrar el contenido que el usuario agregó
     task.placeholder = "Añadir lista";
+
+    task.value = ""; //esto sirve para limpiar o borrar el contenido que el usuario agregó
+    task.placeholder = "Añadir lista";
+
+    //tratando de agregarle estilos a los article
+    /*for (var i = 0;
+        var i < article.length; i++) {
+
+    }
+    var artLnth = article[i]
+    document.getElementByTagName("artLnth").style.background = "red";
+    console.log(article[i]);*/
 
 };
 
@@ -73,5 +138,8 @@ var link = function(event) {
 };
 
 
+
 submitButton.addEventListener('click', taskAdd);
 submitButton.addEventListener('keyup', buttonOff);
+
+submitButton.addEventListener('click', taskAdd);
