@@ -2,6 +2,7 @@ var account = 0;
 var position;
 var container = document.getElementById('tasks');
 var submitButton = document.getElementById('submit-button');
+var texTarea = document.getElementById('textarea-two');
 
 var remove = function() {
     console.log(this);
@@ -9,46 +10,50 @@ var remove = function() {
     //this.parentElement.remove();
 }
 
-//declarando variable para agregar tarjeta en la lista que el usuario ha creado
+//declarando funcion con un evento click para el "link" de agregar tarjeta en la lista de tareas que el usuario ha creado
 var link = function(event) {
-    var elId = this.id;
-    position = elId;
-    console.log('el id ', elId)
+    var elId = this.id; //declarando variable para agregar id a los elementos más abajo
+    position = elId; //la variable elId se usará al llamar position
+    //console.log('el id ', elId)
 
     event.preventDefault();
-    console.log('haciendo click');
-    var createTextArea = document.createElement('textarea');
-    createTextArea.id = 'txaAdd' + elId;
-    var butonNewTask = document.createElement('button');
-    butonNewTask.innerText = 'Agregar tarea';
-    butonNewTask.id = 'btnAdd' + elId;
-    butonNewTask.addEventListener('click', addCard);
+    //console.log('haciendo click');
+    var createTextArea = document.createElement('textarea');//creando el textarea para añadir tarjeta
+    createTextArea.id = 'txaAdd' + elId; //creandole un id al elemento textarea
+    var butonNewTask = document.createElement('button'); //creando boton para añadir la nueva tarjeta
+    butonNewTask.innerText = 'Añadir'; //agregándole texto al botón
+    butonNewTask.id = 'btnAdd' + elId; // creandole id al boton
+    butonNewTask.className = "buttonTask" // creandole clase al boton
+    butonNewTask.addEventListener('click', addCard); // diciendole al boton el evento que tendrá
 
-    document.getElementsByTagName('article')[elId].appendChild(createTextArea)
-    document.getElementsByTagName('article')[elId].appendChild(butonNewTask)
+    document.getElementsByTagName('article')[elId].appendChild(createTextArea) //agregándole el textarea al article por su id
+    document.getElementsByTagName('article')[elId].appendChild(butonNewTask) //agregándole el boton al article por su id
+
+    //quitando el link una vez que ya se agregó la primer tarjeta
+    link.value = ""; //no funciona...
 
 
 }
+
+//declarando funcion para agregar la tarjeta en la lista creada
 var addCard = function(event) {
-    var elId = this.id;
-    console.log('elId ', elId)
-    console.log('position ', position)
-    console.log('aaaa ', 'article' + position)
+    var elId = this.id;//declarando variable para decirle al id a cual id se le hace referencia
+    //console.log('elId ', elId)
+    //console.log('position ', position)
+    //console.log('aaaa ', 'article' + position)
 
     event.preventDefault();
     // console.log('haciendo click');
-    var addTask = document.createElement('div');
+    var addTask = document.createElement('div'); //creando elemento div para la variable que agregará la tarea
     // addTask.id = 'lista'+ elId;
 
-    var newTask = document.getElementById('txaAdd' + position);
+    var newTask = document.getElementById('txaAdd' + position); // declarando variable llamando la texarea de la tarjeta junto con la posicion id
     // console.log('ntval ', elId, newTask.value)
 
     addTask.textContent = newTask.value;
     document.getElementsByTagName('article')[position].appendChild(addTask)
 
     txaAdd0.value = "";
-
-
 
 
 }
@@ -61,6 +66,7 @@ var taskAdd = function(event) {
     var task = document.getElementById('text');
     var article = document.createElement('article');
     article.id = 'article' + account;
+    article.className = "boxAddToCard"
     var label = document.createElement('label');
     var a = document.createElement('a')
     var contentA = document.createTextNode('Agregar una tarjeta')
@@ -84,6 +90,7 @@ var taskAdd = function(event) {
     var addCard = button;
     addCard.id = account;
     addCard.innerText = 'Agregar una tarjeta';
+    addCard.className = "buttonCard"
     addCard.addEventListener('click', link);
 
     //agregamos atributos al padre que es el article
@@ -98,28 +105,44 @@ var taskAdd = function(event) {
     task.value = ""; //esto sirve para limpiar o borrar el contenido que el usuario agregó
     task.placeholder = "Añadir lista";
 
-    //tratando de agregarle estilos a los article
-    /*for (var i = 0;
-        var i < article.length; i++) {
-
-    }
-    var artLnth = article[i]
-    document.getElementByTagName("artLnth").style.background = "red";
-    console.log(article[i]);*/
-
 };
 
-//declarando funcion para hacer el check list de las tareas que el usuario ha realizado ya
-var throughTask = function() {
-    var checked = this.checked; //con this hacemos referencia a qué se le está haciendo el check
-    //console.log(checked);
-    var text = this.nextSibling; //metodo para tachar el texto del checked, en donde el texto a tachar es el hermano del cuadro al que se le hace el check
-    //console.log(text);
-    if (checked) { //aplicando la condición en donde si el usuario le da check al cuadrito, se agregue la linea encima del texto, con el estilo text decoration
-        text.style.textDecoration = 'line-through';
-    } else { //si no se cumple la condición no aplica el estilo de rayar el texto, con none
-        text.style.textDecoration = 'none';
+//funcion para deshabilitar el boton si no tiene texto el texTarea
+/*var offBtn = function() {
+  if (texTarea.value = "") {
+    submitButton.disabled = true;
+    console.log(submitButton)
+  } else {
+    submitButton.disabled = false;
+    console.log(submitButton)
+  }
+};*/
+
+//funcion para abrir el primer texTarea
+/*document.addEventListener('click', openForm);
+
+ function openForm() {
+   var addList = document.getElementById('add-list');
+   var listForm = document.getElementById('list-form');
+
+   if(addList.classList.contains('show')){
+     addList.classList.remove('show');
+     addList.classList.add('hidden');
+   } else if (listForm.classList.contains('hidden')) {
+     listForm.classList.remove('hidden');
+     listForm.classList.add('show');
+   }*/
+
+/*window.addEventListener('click', collapseForm);
+
+  function collapseForm(event) {
+    if (event.target !== addList && event.target !== listForm && event.target.closest('form') !== listForm) {
+      addList.className = '';
+      listForm.className = 'hidden';
     }
-};
+  }
+}*/
+
+//submitButton.addEventListener('click', offBtn);
 
 submitButton.addEventListener('click', taskAdd);
