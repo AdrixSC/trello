@@ -10,7 +10,6 @@ var remove = function() {
 }
 
 //declarando variable para agregar tarjeta en la lista que el usuario ha creado
-//revisar con el squad y jedi
 var link = function(event) {
     var elId = this.id;
     position = elId;
@@ -100,7 +99,13 @@ var taskAdd = function(event) {
     task.placeholder = "Añadir lista";
 
     //tratando de agregarle estilos a los article
-    document.getElementByTagName("article").style.background = "red";
+    /*for (var i = 0;
+        var i < article.length; i++) {
+
+    }
+    var artLnth = article[i]
+    document.getElementByTagName("artLnth").style.background = "red";
+    console.log(article[i]);*/
 
 };
 
