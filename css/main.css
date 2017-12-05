@@ -189,6 +189,7 @@ article>button {
     float: left;
 }
 
+<<<<<<< HEAD
 #text { /*Da estilo al textarea*/
   width: 300px;
   margin: 10px 10px 5px;
@@ -204,6 +205,8 @@ height: 100px;
 border-radius: 5px;
 margin-left: 350px;
 }
+=======
+>>>>>>> fbbdd4d2bcc4ec7dc42b268e713cd5450d227c6d
 
 .enebled-list {
   display: block;
