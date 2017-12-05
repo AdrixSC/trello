@@ -141,5 +141,4 @@ var link = function(event) {
 
 submitButton.addEventListener('click', taskAdd);
 submitButton.addEventListener('keyup', buttonOff);
-
-submitButton.addEventListener('click', taskAdd);
+//comentario de prueba
