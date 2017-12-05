@@ -1,4 +1,5 @@
 var account = 0;
+var position;
 var container = document.getElementById('tasks');
 var submitButton = document.getElementById('submit-button');
 
@@ -10,9 +11,43 @@ var remove = function() {
 
 //declarando variable para agregar tarjeta en la lista que el usuario ha creado
 //revisar con el squad y jedi
-var linkAremi = function(event) {
+var link = function(event) {
+    var elId = this.id;
+    position = elId;
+    console.log('el id ', elId)
+
+
     event.preventDefault();
     console.log('haciendo click');
+    var createTextArea = document.createElement('textarea');
+    createTextArea.id = 'txaAdd' + elId;
+    var butonNewTask = document.createElement('button');
+    butonNewTask.innerText = 'Agregar tarea';
+    butonNewTask.id = 'btnAdd' + elId;
+    butonNewTask.addEventListener('click', addTarea);
+
+    document.getElementsByTagName('article')[elId].appendChild(createTextArea)
+    document.getElementsByTagName('article')[elId].appendChild(butonNewTask)
+}
+var addTarea = function(event) {
+    var elId = this.id;
+    console.log('elId ', elId)
+    console.log('position ', position)
+    console.log('aaaa ', 'article' + position)
+
+    event.preventDefault();
+    // console.log('haciendo click');
+    var addTask = document.createElement('div');
+    // addTask.id = 'lista'+ elId;
+
+    var newTask = document.getElementById('txaAdd' + position);
+    // console.log('ntval ', elId, newTask.value)
+
+    addTask.textContent = newTask.value;
+    document.getElementsByTagName('article')[position].appendChild(addTask)
+
+    txaAdd0.value = "";
+
 
 }
 
@@ -23,6 +58,7 @@ var taskAdd = function(event) {
     //creamos elementos basados en la estructura del html
     var task = document.getElementById('text');
     var article = document.createElement('article');
+    article.id = 'article' + account;
     var label = document.createElement('label');
     var a = document.createElement('a')
     var contentA = document.createTextNode('Agregar una tarjeta')
@@ -44,8 +80,9 @@ var taskAdd = function(event) {
     button.innerText = 'x';
     button.addEventListener('click', remove);*/
     var addCard = button;
+    addCard.id = account;
     addCard.innerText = 'Agregar una tarjeta';
-    addCard.addEventListener('click', linkAremi);
+    addCard.addEventListener('click', link);
 
     //agregamos atributos al padre que es el article
     //article.appendChild(input);
@@ -56,8 +93,8 @@ var taskAdd = function(event) {
     container.appendChild(article);
     account++;
 
-    task.value = " "; //esto sirve para limpiar o borrar el contenido que el usuario agregó
-
+    task.value = ""; //esto sirve para limpiar o borrar el contenido que el usuario agregó
+    task.placeholder = "Añadir lista";
 
 };
 
