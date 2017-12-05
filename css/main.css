@@ -185,3 +185,8 @@ article>button {
 .font {
   font-family: 'Roboto', sans-serif;
 }
+
+/*ejemplo para darle estilo
+#tasks > article > label {
+  background-color: red;
+}*/
