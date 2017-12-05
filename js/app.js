@@ -16,7 +16,6 @@ var link = function(event) {
     position = elId;
     console.log('el id ', elId)
 
-
     event.preventDefault();
     console.log('haciendo click');
     var createTextArea = document.createElement('textarea');
@@ -24,12 +23,14 @@ var link = function(event) {
     var butonNewTask = document.createElement('button');
     butonNewTask.innerText = 'Agregar tarea';
     butonNewTask.id = 'btnAdd' + elId;
-    butonNewTask.addEventListener('click', addTarea);
+    butonNewTask.addEventListener('click', addCard);
 
     document.getElementsByTagName('article')[elId].appendChild(createTextArea)
     document.getElementsByTagName('article')[elId].appendChild(butonNewTask)
+
+
 }
-var addTarea = function(event) {
+var addCard = function(event) {
     var elId = this.id;
     console.log('elId ', elId)
     console.log('position ', position)
@@ -47,6 +48,8 @@ var addTarea = function(event) {
     document.getElementsByTagName('article')[position].appendChild(addTask)
 
     txaAdd0.value = "";
+
+
 
 
 }
@@ -95,6 +98,9 @@ var taskAdd = function(event) {
 
     task.value = ""; //esto sirve para limpiar o borrar el contenido que el usuario agregó
     task.placeholder = "Añadir lista";
+
+    //tratando de agregarle estilos a los article
+    document.getElementByTagName("article").style.background = "red";
 
 };
 
