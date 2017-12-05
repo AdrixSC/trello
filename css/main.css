@@ -23,6 +23,17 @@ nav { /*Da el color de fondo a la primera seccion*/
   vertical-align: middle;
 }
 
+.iconos > .circle > #ch {
+  font-weight: bold;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  vertical-align: middle;
+  font-size: 20px;
+  display: inline-block;
+  margin: 7px;
+  padding: 0;
+}
+
 .board { /*Da estilo al bloque azul de la izquierda*/
   vertical-align: middle;
   background-color: #9FB7FF;
@@ -37,8 +48,8 @@ nav { /*Da el color de fondo a la primera seccion*/
   display: inline-block;
   font-weight: bold;
   color: white;
-  /*outline: 5px solid black;*/
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .board > img {/*Da estilo al icono al lado del texto tableros*/
@@ -72,8 +83,9 @@ nav { /*Da el color de fondo a la primera seccion*/
   color: white;
   font-weight: bold;
   display: inline-block;
+  margin-top: -23px;
+  vertical-align: middle;
   text-align: center;
-  margin-top: -10px;
 }
 
 .iconos { /*Da estilo a ala section que contiene los iconos de la derecha*/
@@ -108,6 +120,7 @@ height: 35px;
   display: inline-block;
   color: white;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
 .section-two { /* Baja los elementos de la section-two*/
@@ -133,6 +146,7 @@ padding-top: 15px;
 .section-two > article > p:nth-of-type(odd) { /*Da estilo al texto tablero-retos*
 /*  outline: 5px solid black;*/
   font-size: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .out { /*Ajusta el texto de Mostrar menú*/
@@ -140,8 +154,19 @@ padding-top: 15px;
 }
 
 
-#submit-button {
+#submit-button { /*Da estilo al boton Guardar*/
     display: block;
+    background-color: #519839;
+    border: none;
+    border-radius: 3px;
+    width: 90px;
+    height: 35px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-left: 12px;
+    margin-bottom: 5px;
+    font-size: 16px;
 }
 
 article {
@@ -163,7 +188,22 @@ article>button {
 #tasks {
     float: left;
 }
-<<<<<<< HEAD
+
+#text { /*Da estilo al textarea*/
+  width: 300px;
+  margin: 10px 10px 5px;
+  border-radius: 5px;
+  background-color: #d7d8da;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+.textarea-two { /*Da estilo al div que funciona como fondo del textarea*/
+background-color: #e2e4e6;
+width: 320px;
+height: 100px;
+border-radius: 5px;
+margin-left: 350px;
+}
 
 .enebled-list {
   display: block;
@@ -185,5 +225,3 @@ article>button {
 .font {
   font-family: 'Roboto', sans-serif;
 }
-=======
->>>>>>> 16a03590a52bb91763b13f43651e1e4d68fd49ae
