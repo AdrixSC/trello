@@ -27,3 +27,5 @@
     5.7 Se agrega un elemento para limpiar el texto ingresado por el usuario
 
     5.8 Se crea la funcion "throughTask" para hacer el check list de las tareas que el usuario ha realizado ya. Dentro de esta funcion se aplican condiciones a) si el usuario le da check al cuadrito, se agrega la linea encima del texto, con el estilo text decoration b) si no se cumple la condición no aplica el estilo de rayar el texto, con none
+
+    ![Ingresando diagrama](assets/images/diagrama-trello.png "trello").
