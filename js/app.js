@@ -4,7 +4,21 @@ var container = document.getElementById('tasks'); //llamndo a la seccion que con
 var submitButton = document.getElementById('submit-button'); //llamando al boton que añadirá los tableros creados
 var texTarea = document.getElementById('textarea-two');//llamando a la seccion que contiene el segundo formulario
 
-//declarando variable para agregar el evento, que agregará la tarea que el usuario ingresará
+
+//funcion para abrir el primer texTarea
+/*var openForm = function() {
+    var addList = document.getElementById('add-list');
+    var listForm = document.getElementById('list-form');
+
+       if(addList.classList.contains('show')){
+          addList.classList.remove('show');
+          addList.classList.add('hidden');
+       } else if (listForm.classList.contains('hidden')) {
+          listForm.classList.remove('hidden');
+          listForm.classList.add('show');
+}*/
+
+//declarando funcion para agregar el evento, que agregará la tarea que el usuario ingresará
 var taskAdd = function(event) {
     event.preventDefault(); //para prevenir eventos inesperados de la funcion
 
@@ -61,10 +75,10 @@ var addCard = function(event) {
   var newTask = document.getElementById('txaAdd' + position); //llamando la texarea de la tarjeta más la posicion id
   // console.log('ntval ', elId, newTask.value)
 
-  addTask.textContent = newTask.value;
-  document.getElementsByTagName('article')[position].appendChild(addTask)
+  addTask.textContent = newTask.value;//añadiendo contenido de texto a la nueva lista
+  document.getElementsByTagName('article')[position].appendChild(addTask)//agregando al formulario el article contenedor de todo aumentando con position su id también
 
-  //txaAdd.value = "";
+  newTask.value = "";//limpiando el area del segundo textarea
 }
 
 //declarando funcion con un evento click para el "link" de agregar tarjeta en la lista de tareas que el usuario ha creado
@@ -83,17 +97,23 @@ var link = function(event) {
   butonNewTask.className = "buttonTask" // creandole clase al boton
   butonNewTask.addEventListener('click', addCard); // diciendole al boton el evento que tendrá
 
-  document.getElementsByTagName('article')[elId].appendChild(createTextArea) //agregándole el textarea al article por su id
+  document.getElementsByTagName('article')[elId].appendChild(createTextArea,) //agregándole el textarea al article por su id
   document.getElementsByTagName('article')[elId].appendChild(butonNewTask) //agregándole el boton al article por su id
 
-  //quitando el link una vez que ya se agregó la primer tarjeta
-  //buttonCard.value = ""; //no funciona...
+  //quitando el link una vez que se abre el textarea... no funciona
+  /*var buttonCard = true;
+  var newTask = true;
 
+  if (buttonCard && newTask){
+     delete buttonCard;
+     console.log(newTask,buttonCard);
+  }*/
 
 }
-//funcion para deshabilitar el boton si no tiene texto el texTarea
+//funcion para deshabilitar el boton si no tiene texto el texTarea, no funciona...
 /*var offBtn = function() {
-  if (texTarea.value = "") {
+  var areaTexto = document.getElementById('text')
+  if (areaTexto.value = "") {
     submitButton.disabled = true;
     console.log(submitButton)
   } else {
@@ -102,31 +122,7 @@ var link = function(event) {
   }
 };*/
 
-//funcion para abrir el primer texTarea
-/*document.addEventListener('click', openForm);
 
- function openForm() {
-   var addList = document.getElementById('add-list');
-   var listForm = document.getElementById('list-form');
-
-   if(addList.classList.contains('show')){
-     addList.classList.remove('show');
-     addList.classList.add('hidden');
-   } else if (listForm.classList.contains('hidden')) {
-     listForm.classList.remove('hidden');
-     listForm.classList.add('show');
-   }*/
-
-/*window.addEventListener('click', collapseForm);
-
-  function collapseForm(event) {
-    if (event.target !== addList && event.target !== listForm && event.target.closest('form') !== listForm) {
-      addList.className = '';
-      listForm.className = 'hidden';
-    }
-  }
-}*/
-
-//submitButton.addEventListener('click', offBtn);
-
+//document.addEventListener('click', openForm);
 submitButton.addEventListener('click', taskAdd);
+//submitButton.addEventListener('click', offBtn);
