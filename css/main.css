@@ -1,15 +1,95 @@
 body {
     /*Da el color de fondo al body*/
     background: #0079bf;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 nav {
     /*Da el color de fondo a la primera seccion*/
     background: #026aa7;
     /*outline: 5px solid black;*/
+}
+
+article {
+    float: left;
+}
+
+article>label {
+    display: block;
+}
+
+article>button {
+    border: 0;
+}
+
+section > .boxAddToCard{
+    /* */
+    background-color: #e2e4e6;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-left: 10px;
+    padding: 10px;
+    position: relative;
+    width: 189px;
+}
+
+section > .boxAddToCard > label{
+    /*estilos para el label del form para añadir tarjetas (boxAddToCard)*/
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+section > .boxAddToCard .buttonCard{
+    background-color: transparent;
+    bottom: 0px;
+    color: #838c91;
+    cursor: pointer;
+    font-size: 13px;
+    height: 30px;
+    margin: 5px 0px 5px 0px;
+    padding: 0px;
+    position: absolute;
+    text-align: left;
+    width: 90%;
+}
+
+section > .boxAddToCard .buttonTask{
+    background-color: #519839;
+    border: none;
+    border-radius: 3px;
+    display: block;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    height: 35px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 27px;
+    position: relative;
+    width: 90px;
+}
+section > .boxAddToCard .buttonTask:hover{
+    background-color: #519839;
+    color: white;
+    text-decoration: none;
+}
+section > .boxAddToCard > button:hover{
+    background-color: #cdd2d4;
+    color: #4d4d4d;
+    text-decoration: underline;
+}
+
+#addList {
+  background-color: #005485;
+  border-radius: 5px;
+  color: white;
+  margin-left: 20px;
+  padding: 10px;
 }
 
 #search {
@@ -26,35 +106,71 @@ nav {
     vertical-align: middle;
 }
 
-.iconos>.circle>#ch {
-    font-weight: bold;
+#submit-button {
+    /*Da estilo al boton Guardar*/
+    background-color: #519839;
+    border: none;
+    border-radius: 3px;
     color: white;
+    cursor: pointer;
+    display: block;
     font-family: 'Roboto', sans-serif;
-    vertical-align: middle;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    height: 35px;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 90px;
+}
+
+#tasks {
+    float: left;
+}
+
+#text {
+    /*Da estilo al textarea*/
+    background-color: rgba(0, 0, 0, .05);
+    border-radius: 5px;
+    border-color: #aaa;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding-left: 5px;
+    width: 240px;
+}
+
+
+.iconos>.circle>#ch {
+    color: white;
     display: inline-block;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
     margin: 7px;
     padding: 0;
+    vertical-align: middle;
 }
 
 .board {
     /*Da estilo al bloque azul de la izquierda*/
-    vertical-align: middle;
     background-color: #4c94be;
-    width: 120px;
     border-radius: 5px;
-    height: 35px;
     display: inline-block;
+    height: 35px;
     margin: -10px 15px 10px 15px;
+    vertical-align: middle;
+    width: 120px;
 }
 
 .board>p {
     /*Da estilo al texto tableros*/
-    display: inline-block;
-    font-weight: bold;
     color: white;
-    padding: 0;
+    display: inline-block;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 0;
 }
 
 .board>img {
@@ -78,41 +194,40 @@ nav {
 .iconos-fondo {
     /*Da estilo a los divs que sirven como fondo a los iconos de la derecha*/
     background-color: #4c94be;
-    width: 35px;
     border-radius: 5px;
-    height: 35px;
     display: inline-block;
+    height: 35px;
+    width: 35px;
 }
 
 .circle {
     /*Da estilo al div que genera el circulo de la derecha*/
-    width: 40px;
-    height: 40px;
     border-radius: 50%;
     background-color: #4c94be;
     color: white;
-    font-weight: bold;
     display: inline-block;
+    font-weight: bold;
+    height: 40px;
     margin-top: -23px;
-    vertical-align: middle;
     text-align: center;
+    vertical-align: middle;
+    width: 40px;
 }
 
 .iconos {
     /*Da estilo a ala section que contiene los iconos de la derecha*/
-    width: 180px;
-    /*  outline: 5px solid black;*/
     display: inline-block;
     margin-left: 400px;
+    width: 180px;
 }
 
 .input {
     /*Da estilo a la section que contiene el input*/
     background: #4c94be;
-    width: 250px;
-    display: inline-block;
     border-radius: 5px;
+    display: inline-block;
     height: 35px;
+    width: 250px;
 }
 
 .input>input {
@@ -124,15 +239,15 @@ nav {
 
 .logo-trello {
     /*Da estilo a la section que contiene el logo de trello*/
-    width: 150px;
     display: inline-block;
     margin: 15px 0px 0px 200px;
+    width: 150px;
 }
 
 .inline {
     /*Da estilo a los elementos de section-two*/
-    display: inline-block;
     color: white;
+    display: inline-block;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
 }
@@ -145,77 +260,19 @@ nav {
 .section-two>.section-three {
     /*posiciona los elementos de section-three*/
     display: inline-block;
-    width: 160px;
     height: 40px;
     margin-left: 750px;
+    width: 160px;
 }
 
 .section-two > p {
-  font-size: 30px;
-}
-
-section > .boxAddToCard{
-    /* */
-    background-color: #e2e4e6;
-    width: 189px;
-    box-sizing: border-box;
-    padding: 10px;
-    margin-left: 10px;
-    position: relative;
-    border-radius: 3px;
-}
-
-section > .boxAddToCard > label{
-    /*estilos para el label del form para añadir tarjetas (boxAddToCard)*/
-    color: black;
-    font-weight: 500;
-    font-size: 18px;
-    margin-bottom: 22px;
-}
-section > .boxAddToCard .buttonCard{
-    background-color: transparent;
-    color: #838c91;
-    cursor: pointer;
-    padding: 0px;
-    font-size: 13px;
-    height: 30px;
-    width: 90%;
-    text-align: left;
-    margin: 5px 0px 5px 0px;
-    position: absolute;
-    bottom: 0px;
-}
-section > .boxAddToCard .buttonTask{
-    display: block;
-    background-color: #519839;
-    border: none;
-    border-radius: 3px;
-    width: 90px;
-    height: 35px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    margin-left: 5px;
-    margin-top: 5px;
-    font-size: 16px;
-    position: relative;
-    margin-bottom: 27px;
-}
-section > .boxAddToCard .buttonTask:hover{
-  background-color: #519839;
-  color: white;
-  text-decoration: none;
-}
-section > .boxAddToCard > button:hover{
-    text-decoration: underline;
-    background-color: #cdd2d4;
-    color: #4d4d4d;
+   font-size: 30px;
 }
 
 .ajuste {
     /*Ajusta la posicion de los iconos y textos de section-two*/
-    margin: 0px 15px 0px 15px;
     font-size: 20px;
+    margin: 0px 15px 0px 15px;
 }
 
 .ajuste-dos {
@@ -236,66 +293,16 @@ section > .boxAddToCard > button:hover{
     margin-top: 5px;
 }
 
-#submit-button {
-    /*Da estilo al boton Guardar*/
-    display: block;
-    background-color: #519839;
-    border: none;
-    border-radius: 3px;
-    width: 90px;
-    height: 35px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    margin-left: 5px;
-    margin-top: 5px;
-    font-size: 16px;
-}
-
-article {
-    float: left;
-}
-
-article>label {
-    display: block;
-}
-
-article>button {
-    border: 0;
-}
-
-#textarea {
-    float: left;
-}
-
-#tasks {
-    float: left;
-}
-
-#text {
-    /*Da estilo al textarea*/
-    margin-left: 5px;
-    margin-top: 5px;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, .05);
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    border-color: #aaa;
-    display: block;
-    padding-left: 5px;
-    width: 240px;
-}
-
 .textarea-two {
     /*Da estilo al div que funciona como fondo del textarea*/
     background-color: #e2e4e6;
-    width: 260px;
-    height: 88px;
     border-radius: 3px;
+    float: left;
+    height: 88px;
     margin-left: 10px;
     min-height: 30px;
     padding: 4px;
-    float: left;
+    width: 260px;
 }
 
 .enebled-list {
@@ -306,22 +313,15 @@ article>button {
     display: none;
 }
 
-#addList {
-    background-color: #005485;
-    color: white;
-    padding: 10px;
-    margin-left: 20px;
-    border-radius: 5px;
-}
 
 .font {
     font-family: 'Roboto', sans-serif;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 .show {
-  display: block;
+    display: block;
 }
