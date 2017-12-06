@@ -1,34 +1,31 @@
-#INSTRUCCIONES
+# TRELLO
 
-En este reto, vamos a replicar el tablero de Trello, para ello vamos a seguir un flujo de versiones que te guiarán en dónde enfocarte desde un inicio.
+## Flujo de trabajo
 
-Versión 0.0.1 *
-Se mostrará el texto "Añadir una lista ...".
-Al hacer click se debe ocultar el texto y mostrar un formulario.
-El formulario está conformado por un input y un botón para que pueda añadir tareas a tu lista.
+1. Maquetar el sitio en HTML con las distintas secciones que requiere indentando correctamente para comprender las relaciones entre cada elemento.
 
-Versión 0.0.2
-Al dar click en el botón de "Guardar", se mostrará un nuevo cuadro donde estará el nombre de la lista agregada.
-Mostrar un texto de "Añadir una tarea" dentro de la lista.
+2. Insertar íconos.
 
-Versión 0.0.3
-Al dar click en "Añadir una tarea", deberá mostrar un formulario con un textarea y un botón que diga "Añadir".
+3. Dar estilo con el archivo .css realizando comentarios y haciendo uso de buenas prácticas.
 
-Versión 0.0.4*
-Poner focus al input al dar click en "Agregar nueva tarea".
-Al dar click en el botón de "Añadir", deberá aparecer el texto de la tarea debajo del título de la lista.
+4. Ordenar por etiquetas, id's y clases.
 
-Versión 0.0.5*
-Mostrar el formulario nuevamente debajo de la última tarea añadida.
+5. GENERAR INTERACCION CON EL ARCHIVO DE JS:
 
-Versión 0.0.6 (Extra)
-Poder agregar múltiples listas con tarjetas. Para esto, el formulario de "Añadir una lista" debe aparecer a la derecha de la lista anteriormente creada.
+    5.1 Crear una textarea que reciba el texto ingresado. En esta Textarea habrá un texto "Añadir una lista..." que debe desaparecer al hacer click
 
+    5.2 Crear un boton para que al hacer click en él se genere una nueva area con el texto ingresado
 
-##CÓDIGO
+    5.3 Declarar una variable "link" que sirve para generar una nueva tarjeta en la lista que el usuario ha creado.
 
-1. Hacer estructura en el html, del maquetado del sitio
-2. Aplicarle los estilos en css
-3. Hacer la funcionalidad dinámica en js
+    5.4 La variable taskAdd nos servira para agregar el evento que insertara la tarea que el usuario ingresará
 
-*Agregar más instrucciones para realizar el proyecto
+    5.5 Se crean elementos en base a la estructura del html
+
+    5.6 Se le dan atributos a los elementos creados.
+
+    5.7 Se agrega un elemento para limpiar el texto ingresado por el usuario
+
+    5.8 Se crea la funcion "throughTask" para hacer el check list de las tareas que el usuario ha realizado ya. Dentro de esta funcion se aplican condiciones a) si el usuario le da check al cuadrito, se agrega la linea encima del texto, con el estilo text decoration b) si no se cumple la condición no aplica el estilo de rayar el texto, con none
+
+    ![Ingresando diagrama](assets/images/diagrama-trello.png "trello").
